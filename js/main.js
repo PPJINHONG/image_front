@@ -17,7 +17,6 @@ function login() {
         console.log("✅ Login Response:", data);  // 디버깅용 콘솔
 
         if (response.ok && data.msg === "Login successful") {  // ✅ 여기까지만 확인
-            alert("Login successful!");
 
             // ✅ user_id가 있으면 저장
             if (data.user_id) {
@@ -33,7 +32,7 @@ function login() {
         }
     })
     .catch(error => {
-        alert("An unexpected error occurred. Please try again later.");
+        alert("server error sorry~ Please try again later.");
         console.error("❌ Network Error:", error);
     });
 }
